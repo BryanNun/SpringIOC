@@ -4,13 +4,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import fr.wildcodeschool.thewizardproject.models.Gandalf;
 import fr.wildcodeschool.thewizardproject.models.Outfit;
+import fr.wildcodeschool.thewizardproject.models.WizardInterface;
 
 public class App {
     public void start() {
         
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
 
-        Book myBook = context.getBean("scienceFictionId", Book.class);
+        WizardInterface myWizardInterface = context.getBean("Wizard", WizardInterface.class);
 
         context.close();
 

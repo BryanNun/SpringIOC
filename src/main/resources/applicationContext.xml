@@ -6,9 +6,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Bean of the book -->
-    <bean id="gandalf" class="fr.wildcodeschool.myLibrary.thewizardproject.Gandalf">
-        <!-- Injection in the constructor : -->
-    </bean>
+    <context:component-scan base-package="fr.wildcodeschool.thewizardproject.models">
+    </context:component-scan>
 
 </beans>
