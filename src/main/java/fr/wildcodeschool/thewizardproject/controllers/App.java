@@ -1,18 +1,21 @@
 package fr.wildcodeschool.thewizardproject.controllers;
 
-import fr.wildcodeschool.thewizardproject.models.Dumbledore;
-import fr.wildcodeschool.thewizardproject.models.Outfit;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import fr.wildcodeschool.thewizardproject.models.WizardInterface;
 
 public class App {
     public void start() {
-        Dumbledore WizardInterface = new Dumbledore();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
+        WizardInterface myWizardInterface = context.getBean("gandalfId", WizardInterface.class);
+
+        context.close(); 
+        
 
         System.out.println("******************");
-        System.out.println(WizardInterface.giveAdvice());
+        System.out.println(myWizardInterface.giveAdvice());
         System.out.println("******************");
-        Outfit myOutfit = new Outfit();
-        WizardInterface.setOutfit(myOutfit);
-        System.out.println(WizardInterface.changeDress());
+        System.out.println(myWizardInterface.changeDress());
 
     }
 }

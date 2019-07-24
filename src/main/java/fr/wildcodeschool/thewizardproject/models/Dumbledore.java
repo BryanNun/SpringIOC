@@ -1,8 +1,6 @@
 package fr.wildcodeschool.thewizardproject.models;
 
-import org.springframework.stereotype.Component;
 
-@Component("dumbledoreId")
 public class Dumbledore implements WizardInterface {
 
     private Outfit myOutfit;

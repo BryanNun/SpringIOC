@@ -1,3 +1,4 @@
+
 package fr.wildcodeschool.thewizardproject;
 
 import org.springframework.boot.SpringApplication;
